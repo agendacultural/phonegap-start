@@ -38,14 +38,14 @@
                       dataType: 'json',
                       async: false,
                       headers: {
-                        "Authorization": "Basic " + btoa("agendacultural@misideas.me" + ":" + "psclcdAI7")
+                        "Authorization": "Basic YWdlbmRhY3VsdHVyYWxAbWlzaWRlYXMubWU6cHNjbGNkQUk3"
                       },
-                      data: '{"pull":"true"}',
+                      data: 'data={"pull":"true"}',
                       success: function (data){
                         alert('Rebuild in progress!!:' + data); 
                       },
                       error: function (msg){
-                        alert('Sorry no se pudo: ' + msg); 
+                        alert('Sorry no se pudo: ' + msg.error); 
                       }
                 });
             }
