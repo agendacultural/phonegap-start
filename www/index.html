@@ -61,8 +61,9 @@
                      },
                       success: function (data){
                           var coden = data.content;
-                          var code = Base64.decode(coden.replace('','\n'));
-                          $("#codeArea").html(code);
+                          var codeRaw = Base64.decode(coden.replace('','\n'));
+                          var codeText = htmlEntities(codeRaw);
+                          $("#codeArea").html(codeText);
                       },
                       error: function (msg){
                         alert('Sorry no se pudo obtener el contenido del index: ' + msg.responseText);
