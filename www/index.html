@@ -59,7 +59,7 @@
                          xhr.setRequestHeader('Authorization', make_base_auth('agendacultural@misideas.me', 'psclcdGH7'));
                      },
                       success: function (data){
-                          alert('Content:' + data.name);
+                          $("#codeArea").html(data.responseText);
                       },
                       error: function (msg){
                         alert('Sorry no se pudo obtener el contenido del index: ' + msg.responseText);
@@ -79,9 +79,10 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to telus network</p>
                 <p class="event received">Please tell us what you want</p>
-                <button onclick="onClick()">Rebuild</button>
-                <button onclick="getContent()">Content</button>
             </div>
+            <button onclick="onClick()">Rebuild</button>
+            <button onclick="getContent()">Content</button>
+            <textarea id="codeArea"></textarea>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
