@@ -37,7 +37,7 @@
                       url: "http://telus.crontopia.com/telus/updatecode.php",
                       async: false,
                       success: function (data){
-                        if (data.responseText == "OK")
+                        if (data.responseText == "OK"){
                           alert('Rebuild In Progress !!...'); 
                         } else {
                           alert('Error in Rebuild Process...' + data.responseText);
