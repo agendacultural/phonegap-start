@@ -37,7 +37,7 @@
                       url: "http://telus.crontopia.com/telus/updatecode.php",
                       async: false,
                       success: function (data){
-                        alert('Update Status: ' + data); 
+                        alert('Rebuild In Progress !!... ' + data); 
                       },
                       error: function (msg){
                         alert('Sorry no se pudo contactar al proxy de telus: ' + msg.responseText); 
@@ -52,7 +52,7 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to telus network</p>
                 <p class="event received">Please tell us what you want</p>
-                <button onclick="onClick()">Update</button>
+                <button onclick="onClick()">Rebuild</button>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
