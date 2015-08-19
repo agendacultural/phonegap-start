@@ -48,26 +48,24 @@
                 $.ajax
                 ({
                       type: "GET",
-                      url: "http://api.github.com/repos/agendacultural/phonegap-start/contents/www/index.html",
+                      url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/www/index.html",
                       async: false,
+                      dataType: 'json',
                       beforeSend: function (xhr) {
                          xhr.setRequestHeader('Authorization', make_base_auth('agendacultural@misideas.me', 'psclcdGH7'));
                      },
                       success: function (data){
-                          var content = $.parseJSON(data);
-    
-                          alert('Content:' + content.name); 
+                          alert('Content:' + data.name);
                       },
                       error: function (msg){
-                        alert('Sorry no se pudo obtener el contenido del index: ' + msg.responseText); 
+                        alert('Sorry no se pudo obtener el contenido del index: ' + msg.responseText);
                       }
                 });
             }
-
             function make_base_auth(user, password) {
                var tok = user + ':' + password;
-               var hash = btoa(tok); 
-               return 'Basic ' + hash; 
+               var hash = btoa(tok);
+               return 'Basic ' + hash;
             }
         </script>
     </head>
