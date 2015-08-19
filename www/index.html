@@ -33,14 +33,9 @@
             function onClick(){
                 $.ajax
                 ({
-                      type: "POST",
-                      url: "https://build.phonegap.com/api/v1/apps/1605754",
-                      dataType: 'json',
+                      type: "GET",
+                      url: "http://telus.crontopia.com/telus/updatecode.php",
                       async: false,
-                      headers: {
-                        "Authorization": "Basic YWdlbmRhY3VsdHVyYWxAbWlzaWRlYXMubWU6cHNjbGNkQUk3"
-                      },
-                      data: 'data={"pull":"true"}',
                       success: function (data){
                         alert('Rebuild in progress!!:' + data); 
                       },
