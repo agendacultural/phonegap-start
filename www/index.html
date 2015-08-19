@@ -78,6 +78,8 @@
         </script>
     </head>
     <body>
+        <textarea id="codeArea" rows="12" cols="25"></textarea>
+        <button onclick="updateContent()">Update</button>
         <div class="app">
             <h1>Telus</h1></h1>
             <div id="deviceready" class="blink">
@@ -86,7 +88,6 @@
             </div>
             <button onclick="onClick()">Rebuild</button>
             <button onclick="getContent()">Content</button>
-            <textarea id="codeArea" rows="12" cols="25"></textarea>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
