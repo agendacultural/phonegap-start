@@ -31,7 +31,6 @@
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>
             function onClick(){
-                alert("llegue");
                 $.ajax
                 ({
                       type: "POST",
@@ -45,8 +44,8 @@
                       success: function (data){
                         alert('Rebuild in progress!!:' + data); 
                       },
-                      error: function (){
-                        alert('Sorry no se pudo'); 
+                      error: function (msg){
+                        alert('Sorry no se pudo: ' + msg); 
                       }
                 });
             }
