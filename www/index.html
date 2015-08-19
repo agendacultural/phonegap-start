@@ -37,10 +37,10 @@
                       url: "http://telus.crontopia.com/telus/updatecode.php",
                       async: false,
                       success: function (data){
-                        alert('Rebuild in progress!!:' + data); 
+                        alert('Update Status: ' + data); 
                       },
                       error: function (msg){
-                        alert('Sorry no se pudo: ' + msg.responseText); 
+                        alert('Sorry no se pudo contactar al proxy de telus: ' + msg.responseText); 
                       }
                 });
             }
