@@ -59,7 +59,7 @@
                          xhr.setRequestHeader('Authorization', make_base_auth('agendacultural@misideas.me', 'psclcdGH7'));
                      },
                       success: function (data){
-                          $("#codeArea").html(data.responseText);
+                          $("#codeArea").html(data.name);
                       },
                       error: function (msg){
                         alert('Sorry no se pudo obtener el contenido del index: ' + msg.responseText);
