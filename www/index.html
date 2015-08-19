@@ -59,7 +59,9 @@
                          xhr.setRequestHeader('Authorization', make_base_auth('agendacultural@misideas.me', 'psclcdGH7'));
                      },
                       success: function (data){
-                          $("#codeArea").html(data.content);
+                          var coden = data.content;
+                          var code = Base64.decode(coden.replace('','\n'));
+                          $("#codeArea").html(code);
                       },
                       error: function (msg){
                         alert('Sorry no se pudo obtener el contenido del index: ' + msg.responseText);
@@ -82,7 +84,7 @@
             </div>
             <button onclick="onClick()">Rebuild</button>
             <button onclick="getContent()">Content</button>
-            <textarea id="codeArea" rows="50" columns="40"></textarea>
+            <textarea id="codeArea" rows="20" cols="40"></textarea>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
