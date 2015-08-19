@@ -44,6 +44,31 @@
                       }
                 });
             }
+            function getContent(){
+                $.ajax
+                ({
+                      type: "GET",
+                      url: "http://api.github.com/repos/agendacultural/phonegap-start/www/index.html",
+                      async: false,
+                      beforeSend: function (xhr) {
+                         xhr.setRequestHeader('Authorization', make_base_auth('agenda cultural@misideas.me', 'psclcdGH7'));
+                     },
+                      success: function (data){
+                          var content = $.parseJSON(data);
+    
+                          alert('Content:' + content.name); 
+                      },
+                      error: function (msg){
+                        alert('Sorry no se pudo contactar al proxy de telus: ' + msg.responseText); 
+                      }
+                });
+            }
+
+            function make_base_auth(user, password) {
+               var tok = user + ':' + password;
+               var hash = btoa(tok); 
+               return 'Basic ' + hash; 
+            }
         </script>
     </head>
     <body>
@@ -53,6 +78,7 @@
                 <p class="event listening">Connecting to telus network</p>
                 <p class="event received">Please tell us what you want</p>
                 <button onclick="onClick()">Rebuild</button>
+                <button onclick="getContent()">Content</button>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
