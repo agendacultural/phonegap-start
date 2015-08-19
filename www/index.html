@@ -48,7 +48,7 @@
                 $.ajax
                 ({
                       type: "GET",
-                      url: "http://api.github.com/repos/agendacultural/phonegap-start/www/index.html",
+                      url: "http://api.github.com/repos/agendacultural/phonegap-start/contents/www/index.html",
                       async: false,
                       beforeSend: function (xhr) {
                          xhr.setRequestHeader('Authorization', make_base_auth('agendacultural@misideas.me', 'psclcdGH7'));
@@ -59,7 +59,7 @@
                           alert('Content:' + content.name); 
                       },
                       error: function (msg){
-                        alert('Sorry no se pudo contactar al proxy de telus: ' + msg.responseText); 
+                        alert('Sorry no se pudo obtener el contenido del index: ' + msg.responseText); 
                       }
                 });
             }
