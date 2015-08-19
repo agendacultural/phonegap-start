@@ -40,9 +40,12 @@
                       headers: {
                         "Authorization": "Basic " + btoa("agendacultural@misideas.me" + ":" + "psclcdAI7")
                       },
-                      data: 'data={"pull":"true"}',
+                      data: '{"pull":"true"}',
                       success: function (){
                         alert('Rebuild in progress!!'); 
+                      },
+                      error: function (){
+                        alert('Sorry no se pudo'); 
                       }
                 });
             }
