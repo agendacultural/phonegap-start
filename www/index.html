@@ -53,7 +53,7 @@
             }
             function updateContent(){
                 var content = $("#codeArea").html();
-                var contentB64 = btoa($('<div/>').html(content).text());
+                var contentB64 = btoa($('#b64helper').html(content).text());
                 var fileSha = $("#fileSha").text();
                 var dataObject = {
                     'message': "Updating index.html",
@@ -89,7 +89,8 @@
         <div class="app2">
             <h1>Telus</h1></h1>
             <textarea id="codeArea" rows="20" cols="30"></textarea>
-            <span id="fileSha"></span>
+            <span id="fileSha" class="hidden"></span>
+            <div id="b64helper" class="hidden"></div>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to telus network</p>
                 <p class="event received">Please tell us what you want</p>
