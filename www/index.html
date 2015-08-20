@@ -52,11 +52,12 @@
                 });
             }
             function updateContent(){
-                var content = btoa($("#codeArea").html().text());
+                var content = $("#codeArea").html();
+                var contentB64 = btoa($('<div/>').html(content).text());
                 var fileSha = $("#fileSha").text();
                 var dataObject = {
                     'message': "Updating index.html",
-                    'content': content,
+                    'content': contentB64,
                     'sha': fileSha
                 };
                 $.ajax
