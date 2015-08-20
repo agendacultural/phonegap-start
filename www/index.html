@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="js/tools.js"></script>
-        <script>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;meta name="format-detection" content="telephone=no" /&gt;
+        &lt;meta name="msapplication-tap-highlight" content="no" /&gt;
+        &lt;!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 --&gt;
+        &lt;meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width" /&gt;
+        &lt;link rel="stylesheet" type="text/css" href="css/index.css" /&gt;
+        &lt;title&gt;Hello World&lt;/title&gt;
+        &lt;script src="http://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+        &lt;script src="js/tools.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
             function onClick(){
                 $.ajax
                 ({
@@ -80,25 +80,25 @@
                var hash = btoa(tok);
                return 'Basic ' + hash;
             }
-        </script>
-    </head>
-    <body>
-        <div class="app2">
-            <h1>Telus</h1></h1>
-            <textarea id="codeArea" rows="20" cols="30"></textarea>
-            <span id="fileSha"></span>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to telus network</p>
-                <p class="event received">Please tell us what you want</p>
-            </div>
-            <button onclick="onClick()">Rebuild</button>
-            <button onclick="getContent()">Content</button>
-            <button onclick="updateContent()">Update</button>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="app2"&gt;
+            &lt;h1&gt;Telus&lt;/h1&gt;&lt;/h1&gt;
+            &lt;textarea id="codeArea" rows="20" cols="30"&gt;&lt;/textarea&gt;
+            &lt;span id="fileSha"&gt;&lt;/span&gt;
+            &lt;div id="deviceready" class="blink"&gt;
+                &lt;p class="event listening"&gt;Connecting to telus network&lt;/p&gt;
+                &lt;p class="event received"&gt;Please tell us what you want&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;button onclick="onClick()"&gt;Rebuild&lt;/button&gt;
+            &lt;button onclick="getContent()"&gt;Content&lt;/button&gt;
+            &lt;button onclick="updateContent()"&gt;Update&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;script type="text/javascript" src="cordova.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="js/index.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
             app.initialize();
-        </script>
-    </body>
-</html>
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
