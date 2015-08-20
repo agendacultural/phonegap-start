@@ -51,7 +51,7 @@
                 });
             }
             function updateContent(){
-                var content = $("#codeArea").html();
+                var content = btoa($("#codeArea").html());
                 var fileSha = $("#fileSha").text();
                 var dataObject = {
                     'message': "Updating index.html",
