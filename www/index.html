@@ -16,7 +16,7 @@
                 ({
                       type: "GET",
                       url: "http://telus.crontopia.com/telus/updatecode.php",
-                      async: false,
+                      async: true,
                       success: function (data){
                         if (data == "OK"){
                           alert('Rebuild In Progress !!...');
@@ -34,7 +34,7 @@
                 ({
                       type: "GET",
                       url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/www/index.html",
-                      async: false,
+                      async: true,
                       dataType: 'json',
                       beforeSend: function (xhr) {
                          xhr.setRequestHeader('Authorization', make_base_auth('agendacultural@misideas.me', 'psclcdGH7'));
@@ -65,7 +65,7 @@
                       url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/www/index.html",
                       contentType: 'application/json',
                       data: JSON.stringify(dataObject),
-                      async: false,
+                      async: true,
                       beforeSend: function (xhr) {
                          xhr.setRequestHeader('Authorization', make_base_auth('agendacultural@misideas.me', 'psclcdGH7'));
                      },
