@@ -124,7 +124,9 @@ h1 {
 
 .codeArea {
     display: block;
-    width: 90%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
