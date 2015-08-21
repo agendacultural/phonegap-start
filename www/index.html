@@ -28,11 +28,11 @@
                       }
                 });
             }
-            function getContent(file){
+            function getContent(path){
                 $.ajax
                 ({
                       type: "GET",
-                      url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/" + file,
+                      url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/" + path,
                       async: true,
                       dataType: 'json',
                       beforeSend: function (xhr) {
@@ -43,6 +43,8 @@
                           var codeRaw = Base64.decode(coden.replace('','\n'));
                           $("#codeArea").val(codeRaw);
                           $("#fileSha").text(data.sha);
+                          $("#filePath").text(data.path);
+                          
                       },
                       error: function (msg){
                         alert('Sorry no se pudo obtener el contenido del index: ' + msg.responseText);
@@ -52,15 +54,17 @@
             function updateContent(){
                 var content = btoa($("#codeArea").val());
                 var fileSha = $("#fileSha").text();
+                var filePath = $("#filePath").text();
+                var msg = "Updating " + filePath;
                 var dataObject = {
-                    'message': "Updating index.html",
+                    'message': msg,
                     'content': content,
                     'sha': fileSha
                 };
                 $.ajax
                 ({
                       type: "PUT",
-                      url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/www/index.html",
+                      url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/" + filePath,
                       contentType: 'application/json',
                       data: JSON.stringify(dataObject),
                       async: true,
@@ -85,8 +89,9 @@
     <body>
         <div class="app2">
             <h1>Telus</h1></h1>
-            <textarea class="codeArea" id="codeArea" rows="17"></textarea>
-            <span id="fileSha"></span>
+            <textarea class="codeArea" id="codeArea" rows="17"></textarea><br/>
+            <span id="fileSha"></span><br/>
+            <span id="filePath"></span>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to telus network</p>
                 <p class="event received">Please tell us what you want</p>
