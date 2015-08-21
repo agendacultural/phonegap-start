@@ -28,11 +28,11 @@
                       }
                 });
             }
-            function getContent(){
+            function getContent(file){
                 $.ajax
                 ({
                       type: "GET",
-                      url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/www/index.html",
+                      url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/" + file,
                       async: true,
                       dataType: 'json',
                       beforeSend: function (xhr) {
@@ -92,7 +92,7 @@
                 <p class="event received">Please tell us what you want</p>
             </div>
             <button onclick="onClick()">Rebuild</button>
-            <button onclick="getContent()">Content</button>
+            <button onclick="getContent('www/index.html')">Index</button>
             <button onclick="updateContent()">Update</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
