@@ -135,5 +135,7 @@ function htmlEntities(str) {
 }
 
 function htmlEntitiesReverse(str) {
-    return String(str).replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+  var d = document.createElement("div");
+  d.innerHTML = str;
+  return typeof d.innerText !== 'undefined' ? d.innerText : d.textContent;
 }
