@@ -85,6 +85,10 @@
                var hash = btoa(tok);
                return 'Basic ' + hash;
             }
+            function onPreview(){
+                var ref = window.open('http://telus.crontopia.com/website/', '_blank', 'location=no');
+                ref.addEventListener('loadstart', function() { alert(event.url); });
+            }
         </script>
     </head>
     <body>
@@ -101,6 +105,7 @@
             <button onclick="getContent('www/index.html')">Index</button>
             <button onclick="getContent('www/css/index.css')">Css</button>
             <button onclick="updateContent()">Update</button>
+            <button onclick="onPreview()">Preview</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
