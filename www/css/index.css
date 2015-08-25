@@ -107,8 +107,8 @@ h1 {
 }
 
 .icon32img {
-    max-width: 30%;
-    max-height: 30%;
+    width: 50;
+    height: 50;
 }
 
 .codeArea {
