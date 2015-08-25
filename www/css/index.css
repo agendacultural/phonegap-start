@@ -124,6 +124,7 @@ h1 {
 }
 
 .codeArea {
+    font-size: 18px;
     display: block;
     width: 95%;
     margin-left: auto;
