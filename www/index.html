@@ -89,6 +89,60 @@
                 var ref = window.open('http://telus.crontopia.com/website/www/', '_blank', 'location=no');
                 ref.addEventListener('loadstart', function() { alert(event.url); });
             }
+
+            $('#frmImport').submit(function(e){
+             e.preventDefault();
+              //CHECK ERRORS ON USER SIDE, IF TRUE, END OPERATIONS.
+              if (import_errors()){
+                 return false;
+              }
+              import_db();
+              return false;
+           });
+
+          function import_errors(){
+            if ($('#fileImportData').val() == ''){
+              alert('No file(s) selected. Please choose a image file to upload.');
+              return true;
+            }
+            if ($('#fileImportData').val() != ''){
+              var ext = $('#fileImportData').val().split('.').pop().toLowerCase();
+              if($.inArray(ext, ['jpeg','jpg','png']) == -1) {
+                alert('Invalid file type. Please choose a Image file to upload.');
+                return true;
+              }
+            }
+            return false;
+         }
+
+          function import_db(){
+              var formData = new FormData();
+              var imageFile = $('#fileImportData')[0].files[0];
+              var msg = 'New image uploaded';
+              var content = btoa(imageFile);
+              var dataObject = {
+                    'message': msg,
+                    'content': content
+              };
+              $.ajax
+                ({
+                      type: "PUT",
+                      url: "https://api.github.com/repos/agendacultural/phonegap-start/contents/www/img",
+                      contentType: 'application/json',
+                      data: JSON.stringify(dataObject),
+                      async: true,
+                      beforeSend: function (xhr) {
+                         xhr.setRequestHeader('Authorization', make_base_auth('agendacultural@misideas.me', 'psclcdGH7'));
+                     },
+                      success: function (data){
+                         $("#fileSha").text(data.content.sha);
+                         alert("Successful Upload Image " + data.content.name );
+                      },
+                      error: function (msg){
+                        alert('Sorry no se pudo subir la imagen: ' + msg.responseText);
+                      }
+                });
+        }
         </script>
     </head>
     <body>
