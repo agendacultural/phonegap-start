@@ -153,8 +153,6 @@
                 <p class="event listening">NO CONNECTED TO DEVICE</p>
                 <p class="event received">DEVICE READY</p>
             </div>
-            <span id="filePath"></span><br/>
-            <span id="fileSha"></span><br/>
             <button onclick="getContent('www/index.html')">HTML</button>
             <button onclick="getContent('www/css/index.css')">CSS</button>
             <button onclick="getContent('www/js/index.js')">JS</button>
@@ -162,6 +160,8 @@
             <button onclick="updateContent()">Update</button>
             <button onclick="onClick()">Rebuild</button>
             <button onclick="onPreview()">Preview</button><br/>
+            <span id="filePath"></span><br/>
+            <span id="fileSha"></span><br/>
             <textarea class="codeArea" style="display: none" id="codeArea" rows="17"></textarea><br/>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
