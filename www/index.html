@@ -29,7 +29,7 @@
                 });
             }
             function getContent(path){
-                 $("#codeArea").css ("display","block");
+                 
                 $.ajax
                 ({
                       type: "GET",
@@ -116,7 +116,7 @@
             return false;
          }
 
-          function import_db(){
+         function import_db(){
               var formData = new FormData();
               var imageFile = $('#fileImportData')[0].files[0];
               var msg = 'New image uploaded';
@@ -143,6 +143,10 @@
                         alert('Sorry no se pudo subir la imagen: ' + msg.responseText);
                       }
                 });
+        }
+
+        function goEdit(){
+          $("#editPanel").css ("display","block");
         }
         </script>
     </head>
