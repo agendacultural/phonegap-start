@@ -146,8 +146,13 @@
         }
 
         function goEdit(){
+         if ($("#editBtn").caption() == "Edit"){
           $("#editPanel").css ("display","block");
           $("#editBtn").html("Run");
+         } else {
+          $("#editPanel").css ("display","none");
+          $("#editBtn").html("Edit");
+         }
         }
         </script>
     </head>
