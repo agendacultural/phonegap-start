@@ -148,9 +148,11 @@
         function goEdit(){
          if ($("#editBtn").html() == "Edit"){
           $("#editPanel").css ("display","block");
+          $("#runPanel").css ("display","none");
           $("#editBtn").html("Run");
          } else {
           $("#editPanel").css ("display","none");
+          $("#runPanel").css ("display","block");
           $("#editBtn").html("Edit");
          }
         }
@@ -175,6 +177,9 @@
              <span id="fileSha"></span><br/>
              <textarea class="codeArea" id="codeArea" rows="17"></textarea><br/>
             </div>
+        </div>
+        <div id="runPanel">
+          <input id="cmd"></input>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
