@@ -156,6 +156,9 @@
           $("#editBtn").html("Edit");
          }
         }
+        function doProcess(){
+           alert("Command: " + $("#cmdInput").val());
+        }
         </script>
     </head>
     <body>
@@ -179,7 +182,8 @@
             </div>
         </div>
         <div id="runPanel">
-          <input id="cmd"></input>
+          <input id="cmdInput"></input>
+          <button onclick="doProcess()">Process</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
