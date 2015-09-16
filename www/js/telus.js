@@ -7,11 +7,11 @@ function doProcess(){
       case "agregar boton":
         modalTitle = 'Add Button';
         modalBody = '<form role="form" \
-                                <div class="form-group"> \
-                                  <label for="inputButtonCaption">Caption:</label><input  class="form-control" id="inputButtonCaption"></input> \
-                                  <label for="inputButtonOnClick">OnClick:</label><input  class="form-control" id="inputButtonOnClick"></input> \
-                                </div>
-                              </form>';
+                        <div class="form-group"> \
+                           <label for="inputButtonCaption">Caption:</label><input  class="form-control" id="inputButtonCaption"></input> \
+                           <label for="inputButtonOnClick">OnClick:</label><input  class="form-control" id="inputButtonOnClick"></input> \
+                        </div> \
+                     </form>';
         break;
       default:
         modalTitle = 'Unrecognized Command';
