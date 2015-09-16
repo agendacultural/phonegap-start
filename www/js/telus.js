@@ -6,7 +6,12 @@ function doProcess(){
    switch (cmd.toLowerCase()){
       case "agregar boton":
         modalTitle = 'Add Button';
-        modalBody = '<label>Caption:</label><input id="inputButtonCaption"></input><br/><label>OnClick:</label><input id="inputButtonOnClick"></input>';
+        modalBody = '<form role="form" \
+                                <div class="form-group"> \
+                                  <label for="inputButtonCaption">Caption:</label><input  class="form-control" id="inputButtonCaption"></input> \
+                                  <label for="inputButtonOnClick">OnClick:</label><input  class="form-control" id="inputButtonOnClick"></input> \
+                                </div>
+                              </form>';
         break;
       default:
         modalTitle = 'Unrecognized Command';
