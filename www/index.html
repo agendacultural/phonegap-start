@@ -169,21 +169,21 @@
                 <p class="event received">DEVICE READY</p>
             </div>
             <div id="editPanel" class="editPanel">
-             <button onclick="getContent('www/index.html')">HTML</button>
-             <button onclick="getContent('www/css/index.css')">CSS</button>
-             <button onclick="getContent('www/js/index.js')">JS</button>
-             <button onclick="getContent('www/config.xml')">Config</button><br/>
-             <button onclick="updateContent()">Update</button>
-             <button onclick="onClick()">Rebuild</button>
-             <button onclick="onPreview()">Preview</button><br/>
-             <span id="filePath"></span><br/>
-             <span id="fileSha"></span><br/>
-             <textarea class="codeArea" id="codeArea" rows="17"></textarea><br/>
+               <button onclick="getContent('www/index.html')">HTML</button>
+               <button onclick="getContent('www/css/index.css')">CSS</button>
+               <button onclick="getContent('www/js/index.js')">JS</button>
+               <button onclick="getContent('www/config.xml')">Config</button><br/>
+               <button onclick="updateContent()">Update</button>
+               <button onclick="onClick()">Rebuild</button>
+               <button onclick="onPreview()">Preview</button><br/>
+               <span id="filePath"></span><br/>
+               <span id="fileSha"></span><br/>
+               <textarea class="codeArea" id="codeArea" rows="17"></textarea><br/>
             </div>
-        </div>
-        <div id="runPanel">
-          <input id="cmdInput"></input>
-          <button onclick="doProcess()">Process</button>
+            <div id="runPanel">
+                <input id="cmdInput"></input>
+                <button onclick="doProcess()">Process</button>
+            </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
