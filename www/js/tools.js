@@ -12,6 +12,7 @@
                 modalTitle = 'Unrecognized Command';
                 modalBody = 'No params ';
            }
+           alert ("-" + cmd + "-");
            $(".modal-title").html(modalTitle);
            $(".modal-boda").html(modalBody);
         }
