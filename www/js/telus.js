@@ -13,7 +13,6 @@ function doProcess(){
                         <div class="form-group"> \
                            <label class="pull-left" for="inputButtonOnClick">OnClick:</label><input  class="form-control" id="inputButtonOnClick"></input> \
                         </div> \
-                        <button type="submit" class="btn btn-success pull-left">Create Button</button> \
                      </form>';
         break;
       default:
