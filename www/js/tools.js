@@ -2,6 +2,7 @@
 
         function doProcess(){
            var cmd = $("#cmdInput").val();
+           alert("-" + cmd + "-");
            switch (cmd){
               case "Agregar boton":
                 modalTitle = 'Button create';
