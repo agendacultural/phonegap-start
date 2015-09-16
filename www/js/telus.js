@@ -3,8 +3,8 @@
 function doProcess(){
    var cmdRaw = $("#cmdInput").val();
    var cmd = normalize(cmdRaw);
-   switch (cmd){
-      case "Agregar boton":
+   switch (cmd.toLowerCase()){
+      case "agregar boton":
         modalTitle = 'Add Button';
         modalBody = 'Button params ';
         break;
