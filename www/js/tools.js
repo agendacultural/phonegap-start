@@ -3,7 +3,7 @@
         function doProcess(){
            var cmd = $("#cmdInput").val();
            switch (cmd){
-              case 'Agregar botón':
+              case "Agregar boton":
                 modalTitle = 'Button create';
                 modalBody = 'Button params ';
                 break;
