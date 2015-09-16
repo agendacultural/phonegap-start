@@ -1,4 +1,9 @@
 ///////      Funciones de edicion de apps        ////// 
+
+        function doProcess(){
+           alert("Command: " + $("#cmdInput").val());
+        }
+
          function onClick(){
                 $.ajax
                 ({
@@ -144,9 +149,6 @@
           $("#runPanel").css ("display","block");
           $("#editBtn").html("Edit");
          }
-        }
-        function doProcess(){
-           alert("Command: " + $("#cmdInput").val());
         }
 
 ////// Funciones auxiliares ///////
