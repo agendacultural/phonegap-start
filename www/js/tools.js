@@ -12,7 +12,6 @@
                 modalTitle = 'Unrecognized Command';
                 modalBody = 'No params ';
            }
-           alert ("-" + cmd + "-");
            $(".modal-title").html(modalTitle);
            $(".modal-boda").html(modalBody);
         }
@@ -308,7 +307,7 @@ function htmlEntitiesReverse(str) {
 }
 
 var normalize = (function() {
-  var from = "ÃƒÃ€ÃÃ„Ã‚ÃˆÃ‰Ã‹ÃŠÃŒÃÃÃÃ’Ã“Ã–Ã”Ã™ÃšÃœÃ›Ã£Ã Ã¡Ã¤Ã¢Ã¨Ã©Ã«ÃªÃ¬Ã­Ã¯Ã®Ã²Ã³Ã¶Ã´Ã¹ÃºÃ¼Ã»Ã‘Ã±Ã‡Ã§", 
+  var from = "ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç", 
       to   = "AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc",
       mapping = {};
  
