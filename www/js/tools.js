@@ -2,7 +2,17 @@
 
         function doProcess(){
            var cmd = $("#cmdInput").val();
-           $(".modal-title").html("Command: " + cmd);
+           switch (cmd){
+              case 'Agregar botón':
+                modalTitle = 'Button create';
+                modalBody = 'Button params ';
+                break;
+              default:
+                modalTitle = 'Unrecognized Command';
+                modalBody = 'No params ';
+           }
+           $(".modal-title").html(modalTitle);
+           $(".modal-boda").html(modalBody);
         }
 
          function onClick(){
