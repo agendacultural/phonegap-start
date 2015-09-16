@@ -38,30 +38,31 @@
                <button class="btn btn-success  btn-lg" onclick="onPreview()">
                  <span class="glyphicon glyphicon-new-window " aria-hidden="true"></span>
                </button>
-            </div>
+            </div><!-- end editPanel -->
+            <!-- runPanel -->
             <div id="runPanel">
                 <input id="cmdInput"></input>
                 <button class="btn btn-success" onclick="doProcess()" data-toggle="modal" data-target="#myModal">Process</button>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Add button</h4>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add button</h4>
+                      </div>
+                      <div class="modal-body">
+                        Parameters:
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">Create</button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="modal-body">
-                    Parameters:
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-success">Create</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-        </div>
+                </div><!-- end Modal -->
+            </div><!-- end runPanel -->
+        </div><!-- end app2 -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
