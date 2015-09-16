@@ -21,21 +21,22 @@
                <button class="btn btn-warning" onclick="getContent('www/css/index.css')">CSS</button>
                <button class="btn btn-danger" onclick="getContent('www/js/index.js')">JS</button>
                <button class="btn btn-danger" onclick="getContent('www/js/tools.js')">Tools</button>
-               <button class="btn btn-default" onclick="getContent('www/config.xml')">
-                 <span class="glyphicon glyphicon-wrench " aria-hidden="true"></span>
-               </button>
-               <button class="btn btn-default" onclick="updateContent()">
-                 <span class="glyphicon glyphicon-save " aria-hidden="true"></span>
-               </button>
-               <button class="btn btn-default" onclick="onClick()">
-                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-               </button>
-               <button class="btn btn-default" onclick="onPreview()">
-                 <span class="glyphicon glyphicon-new-window " aria-hidden="true"></span>
-               </button><br/>
+               <br/>
                <span id="filePath"></span><br/>
                <span id="fileSha"></span><br/>
                <textarea class="codeArea" id="codeArea" rows="17"></textarea><br/>
+               <button class="btn btn-default btn-lg" onclick="getContent('www/config.xml')">
+                 <span class="glyphicon glyphicon-wrench " aria-hidden="true"></span>
+               </button>
+               <button class="btn btn-default btn-lg" onclick="updateContent()">
+                 <span class="glyphicon glyphicon-save " aria-hidden="true"></span>
+               </button>
+               <button class="btn btn-default btn-lg" onclick="onClick()">
+                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+               </button>
+               <button class="btn btn-default btn-lg" onclick="onPreview()">
+                 <span class="glyphicon glyphicon-new-window " aria-hidden="true"></span>
+               </button>
             </div>
             <div id="runPanel">
                 <input id="cmdInput"></input>
