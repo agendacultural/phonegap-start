@@ -1,7 +1,7 @@
 ///////      Funciones de edicion de apps        ////// 
 
         function doProcess(){
-           alert("Command: " + $("#cmdInput").val());
+           $(".modalBody").html("Command: " + $("#cmdInput").val());
         }
 
          function onClick(){
