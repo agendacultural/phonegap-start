@@ -1,4 +1,5 @@
-function onClick(){
+///////      Funciones de edicion de apps        ////// 
+         function onClick(){
                 $.ajax
                 ({
                       type: "GET",
@@ -148,6 +149,7 @@ function onClick(){
            alert("Command: " + $("#cmdInput").val());
         }
 
+////// Funciones auxiliares ///////
 var Base64 = {
 
 
