@@ -164,7 +164,7 @@
     </head>
     <body>
         <div class="app2">
-            <h1>Telus what you want <button class="btn btn-primary" id="editBtn" onclick="goEdit ()"><span class="glyphicon glyphicon-edit " aria-hidden="true"></span></button></h1>
+            <h1>Telus what you want <button class="btn btn-primary" id="editBtn" onclick="goEdit ()">Edit</button></h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">NO CONNECTED TO DEVICE</p>
                 <p class="event received">DEVICE READY</p>
@@ -172,8 +172,10 @@
             <div id="editPanel" class="editPanel">
                <button onclick="getContent('www/index.html')">HTML</button>
                <button onclick="getContent('www/css/index.css')">CSS</button>
-               <button onclick="getContent('www/js/index.js')">JS</button>
-               <button onclick="getContent('www/config.xml')">Config</button><br/>
+               <button onclick="getContent('www/js/index.js')">JS</button><br/>
+               <button onclick="getContent('www/config.xml')">
+                 <span class="glyphicon glyphicon-edit " aria-hidden="true"></span>
+               </button>
                <button onclick="updateContent()">Update</button>
                <button onclick="onClick()">Rebuild</button>
                <button onclick="onPreview()">Preview</button><br/>
