@@ -125,3 +125,7 @@ h1 {
 .editPanel {
     display: none
 }
+
+.modal-body .control-label {
+    text-align: left;
+}
