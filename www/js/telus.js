@@ -13,7 +13,7 @@ function doProcess(){
         modalBody = 'No params ';
    }
    $(".modal-title").html(modalTitle);
-   $(".modal-boda").html(modalBody);
+   $(".modal-body").html(modalBody);
 }
 
  function onClick(){
