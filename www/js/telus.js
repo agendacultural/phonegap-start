@@ -8,8 +8,8 @@ function doProcess(){
         modalTitle = 'Add Button';
         modalBody = '<form role="form" \
                         <div class="form-group"> \
-                           <label for="inputButtonCaption">Caption:</label><input  class="form-control" id="inputButtonCaption"></input> \
-                           <label for="inputButtonOnClick">OnClick:</label><input  class="form-control" id="inputButtonOnClick"></input> \
+                           <label class="control-label" for="inputButtonCaption">Caption:</label><input  class="form-control" id="inputButtonCaption"></input> \
+                           <label class="control-label" for="inputButtonOnClick">OnClick:</label><input  class="form-control" id="inputButtonOnClick"></input> \
                         </div> \
                      </form>';
         break;
