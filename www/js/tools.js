@@ -308,7 +308,7 @@ function htmlEntitiesReverse(str) {
 }
 
 var normalize = (function() {
-  var from = "ΓΐΑΔΒΘΙΛΚΜΝΟΞÒΣΦΤΩΪάΫγΰαδβθιλκμνοξςσφτωϊόϋΡρΗη", 
+  var from = "ΓƒΓ€ΓΓ„Γ‚ΓΓ‰Γ‹ΓΓΓΓΓΓ’Γ“Γ–Γ”Γ™ΓΓΓ›Γ£Γ Γ΅Γ¤ΓΆΓ¨Γ©Γ«ΓªΓ¬Γ­Γ―Γ®Γ²Γ³Γ¶Γ΄ΓΉΓΊΓΌΓ»Γ‘Γ±Γ‡Γ§", 
       to   = "AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc",
       mapping = {};
  
