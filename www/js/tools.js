@@ -1,7 +1,8 @@
 ///////      Funciones de edicion de apps        ////// 
 
         function doProcess(){
-           var cmd = $("#cmdInput").val();
+           var cmdRaw = $("#cmdInput").val();
+           var cmd = cmdRaw.replace(/ó/gi,"o");
            switch (cmd){
               case "Agregar botón":
                 modalTitle = 'Add Button';
