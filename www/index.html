@@ -174,11 +174,17 @@
                <button onclick="getContent('www/css/index.css')">CSS</button>
                <button onclick="getContent('www/js/index.js')">JS</button><br/>
                <button onclick="getContent('www/config.xml')">
-                 <span class="glyphicon glyphicon-edit " aria-hidden="true"></span>
+                 <span class="glyphicon glyphicon-wrench " aria-hidden="true"></span>
                </button>
-               <button onclick="updateContent()">Update</button>
-               <button onclick="onClick()">Rebuild</button>
-               <button onclick="onPreview()">Preview</button><br/>
+               <button onclick="updateContent()">
+                 <span class="glyphicon glyphicon-save " aria-hidden="true"></span>
+               </button>
+               <button onclick="onClick()">
+                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+               </button>
+               <button onclick="onPreview()">
+                 <span class="glyphicon glyphicon-new-window " aria-hidden="true"></span>
+               </button><br/>
                <span id="filePath"></span><br/>
                <span id="fileSha"></span><br/>
                <textarea class="codeArea" id="codeArea" rows="17"></textarea><br/>
